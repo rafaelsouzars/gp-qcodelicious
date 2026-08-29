@@ -32,10 +32,34 @@
 }
 
 .download-button {	
+	width: clamp(20px, 120px, 250px);
+	height: clamp(20px, 40px, 80px);
+	padding: 0 15px;	
+	background-color: #009100;	
+	border: 1px solid transparent;
+	border-radius: 10px;
+	transition: background-color 0.4s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.download-button > a {
 	font-size: 12px;
 	display: flex;
 	align-items: center;
 	gap: 8px;
+	color: #ccc;
+	text-decoration: none;
+}
+
+.download-button > a:visited {
+	color: #ccc;
+}
+
+.download-button:hover {
+	background-color: #00b100;
+}
+
+.download-button:active {
+	transform: scale(0.9,0.9);
 }
 
 .language-button {
