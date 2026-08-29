@@ -1,7 +1,8 @@
 import { LocationProvider, Router, Route } from 'preact-iso';
 import { Header } from './components/index';
 import { Home, NotFound } from './pages/index';
-import { LanguageProvider } from './contexts'
+import { LanguageProvider } from './contexts';
+import { BASEURL } from './shared/variables.ts';
 import './app.css'
 
 export function App() {
@@ -14,7 +15,7 @@ export function App() {
         <Header />
         <main>
           <Router>
-            <Route path="/" component={Home} />
+            <Route path={BASEURL} component={Home} />
             <Route default component={NotFound} />
           </Router>
         </main>
