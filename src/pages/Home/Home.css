@@ -1,9 +1,8 @@
-img {
-	margin-bottom: 1.5rem;
+.logo {	
 	transition: filter 0.3s ease-in, transform 0.3s ease-in;
 }
 
-img:hover {
+.logo:hover {
 	transform: scale(1.1, 1.1);
 	filter: drop-shadow(0 0 2em #424242aa);
 }
