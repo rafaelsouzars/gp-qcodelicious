@@ -37,7 +37,7 @@ export function Home() {
 				}}>
 					<p style={{ maxWidth: '300px', textAlign: 'justify' }}>{t.description}</p>
 					<div>
-						<DownloadButton>{t.buttonDownload}</DownloadButton>
+						<DownloadButton url="https://github.com/rafaelsouzars/qcodelicious/releases/latest">{t.buttonDownload}</DownloadButton>
 					</div>									
 				</Card>
 			</section>				

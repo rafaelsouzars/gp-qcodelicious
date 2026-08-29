@@ -36,7 +36,7 @@ export function ImageLink ({
 
     return (
         <>
-            <a className={className} href={url} target="_blank" style={{...style, width, height}}>
+            <a className={className} href={url} target="_blank" rel="noopener noreferrer" style={{...style, width, height}}>
                 <img src={src} alt={alt} height={height} width={width} />
             </a>
         </>
