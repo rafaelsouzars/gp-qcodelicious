@@ -38,7 +38,7 @@
 
 @media (max-width: 639px) {
 	.home section {
-		margin-top: 5rem;
+		margin-top: 2rem;
 		grid-template-columns: 1fr;
 		row-gap: 1rem;
 	}
