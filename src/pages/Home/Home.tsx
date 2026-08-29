@@ -4,28 +4,30 @@ import aceEditorLogo from '../../assets/ace-logo.png';
 import swalLogo from '../../assets/SweetAlert2.png';
 import muiLogo from '../../assets/material-ui.svg';
 import { Card, DownloadButton, ImageLink } from '../../components/index';
+import { useLanguage } from '../../contexts/index'
 import './Home.css';
 
 export function Home() {	
+	const { t } = useLanguage();
 
 	return (
 		<div className="home">
 			<section className="flex">
 				<div className="title-content">
 					<a href="https://github.com/rafaelsouzars/qcodelicious" target="_blank">
-						<img src={qCodeliciousLogo} alt="qCodelicious logo" height="140" width="140" />
+						<img className="logo" src={qCodeliciousLogo} alt="qCodelicious logo" height="140" width="140" />
 					</a>
 					<h1>qCodelicious</h1>
-					<p>A simple code editor</p>
+					<p>{t.title}</p>
 					<Card style={{						
 						display: 'flex',
 						alignItems: 'center',					 
 						justifyContent: 'space-around', 
 						gap: '10px'}}>					
-					<ImageLink src={electrobunLogo} alt="Electrobun" url="https://blackboard.sh/electrobun/"/>	
-					<ImageLink src={aceEditorLogo} alt="Ace Editor" url="https://ace.c9.io"/>
-					<ImageLink src={swalLogo} alt="SweetAlert2" url="https://sweetalert2.github.io"/>
-					<ImageLink src={muiLogo} alt="Electrobun" url="https://blackboard.sh/electrobun/"/>					
+					<ImageLink className="logo" src={electrobunLogo} alt="Electrobun" url="https://blackboard.sh/electrobun/"/>	
+					<ImageLink className="logo" src={aceEditorLogo} alt="Ace Editor" url="https://ace.c9.io"/>
+					<ImageLink className="logo" src={swalLogo} alt="SweetAlert2" url="https://sweetalert2.github.io"/>
+					<ImageLink className="logo" src={muiLogo} alt="Electrobun" url="https://blackboard.sh/electrobun/"/>					
 				</Card>
 				</div>
 				<Card style={{
@@ -33,9 +35,9 @@ export function Home() {
 					flexDirection: 'column',
 					alignItems: 'center'
 				}}>
-					<p style={{ maxWidth: '300px', textAlign: 'justify' }}>An editor for those who just want to write and quickly preview, without visual clutter.</p>
+					<p style={{ maxWidth: '300px', textAlign: 'justify' }}>{t.description}</p>
 					<div>
-						<DownloadButton>Latest Download</DownloadButton>
+						<DownloadButton>{t.buttonDownload}</DownloadButton>
 					</div>									
 				</Card>
 			</section>				

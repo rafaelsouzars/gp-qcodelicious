@@ -38,6 +38,31 @@
 	gap: 8px;
 }
 
+.language-button {
+	width: 40px;
+	height: 40px;
+	margin-top: 4px;	
+	background-color: #424242;
+	color: #ccc;
+	border: 1px solid transparent;
+	border-radius: 10px;
+	transition: background-color 0.4s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.language-button > img {
+	width: 20px;
+	height: 20px;
+	transition: src 0.4s ease-in-out;
+}
+
+.language-button:hover {
+	background-color: #505050;
+}
+
+.language-button:active {
+	transform: scale(0.9,0.9);
+}
+
 .button {
 	width: clamp(20px, 120px, 250px);
 	height: clamp(20px, 40px, 80px);
